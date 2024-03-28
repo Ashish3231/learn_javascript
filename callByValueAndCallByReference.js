@@ -18,7 +18,7 @@ console.log(num); // Output: 42
 // ----------------------------------- call by reference ------------------------------------
 
 /**
- * When objects (including arrays and functions) are passed to a function or assigned to another variable,
+ * When objects (including arrays and functions) are passed to a function
  * the value passed is actually a reference to the memory location where the object is stored.
  * As a result, changes made to the object inside the function will affect the original object.
  */

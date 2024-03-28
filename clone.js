@@ -22,9 +22,11 @@ const originalObject = {
 // const clonedObject = { ...originalObject }
 // const clonedObject = Object.assign({}, originalObject);
 const clonedObject = { ...originalObject };
+console.log('clone value: ', clonedObject);
 
 clonedObject.newKey = 'newvalue';
 clonedObject.key1 = 'edit';
+clonedObject.inner.innerKey1 = 'innerValueUpdated';
 clonedObject.inner.innerArray = ['edit'];
 console.log('clone value: ', clonedObject);
 
