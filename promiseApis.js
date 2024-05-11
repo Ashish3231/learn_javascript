@@ -7,17 +7,17 @@
 
 const p1 = new Promise((resolve, reject) => {
   setTimeout(() => {
-    reject('P1 failed');
+    reject("P1 failed");
   }, 1000);
 });
 const p2 = new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve('P2 success');
+    resolve("P2 success");
   }, 2000);
 });
 const p3 = new Promise((resolve, reject) => {
   setTimeout(() => {
-    resolve('P3 success');
+    resolve("P3 success");
   }, 3000);
 });
 
@@ -30,24 +30,24 @@ const p3 = new Promise((resolve, reject) => {
  */
 Promise.all([p1, p2, p3])
   .then((res) => {
-    console.log('result of all: ', res);
+    console.log("result of all: ", res);
   })
   .catch((err) => {
-    console.log('error in all: ', err);
+    console.log("error in all: ", err);
   });
 
 /***
  * allSettled
  *
- * 1. it return the array of promises return in both case resolve and reject
+ * 1. it return the array of promises in both case resolve and reject
  */
 
 Promise.allSettled([p1, p2, p3])
   .then((res) => {
-    console.log('result of allSettled: ', res);
+    console.log("result of allSettled: ", res);
   })
   .catch((err) => {
-    console.log('error in allSettled: ', err);
+    console.log("error in allSettled: ", err);
   });
 
 /*****
@@ -59,10 +59,10 @@ Promise.allSettled([p1, p2, p3])
 
 Promise.race([p1, p2, p3])
   .then((res) => {
-    console.log('result of race: ', res);
+    console.log("result of race: ", res);
   })
   .catch((err) => {
-    console.log('error in race: ', err);
+    console.log("error in race: ", err);
   });
 
 /****
@@ -74,8 +74,8 @@ Promise.race([p1, p2, p3])
 
 Promise.any([p1, p2, p3])
   .then((res) => {
-    console.log('result of any: ', res);
+    console.log("result of any: ", res);
   })
   .catch((err) => {
-    console.log('error in any: ', err);
+    console.log("error in any: ", err);
   });

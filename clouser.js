@@ -1,15 +1,15 @@
 function outer() {
-  let outerVar = 'I am from outer';
+  let outerVar = "I am from outer";
 
   function inner(msg) {
-    console.log(outerVar + ' ' + msg); // The inner function references outerVar
+    console.log(outerVar + " " + msg); // The inner function references outerVar
   }
 
   return inner; // Return the inner function
 }
 
 let closureFunction = outer(); // outer() is executed, and inner function is returned
-closureFunction('hello'); // Even when executed here, inner still has access to outerVar
+closureFunction("hello"); // Even when executed here, inner still has access to outerVar
 
 //------------------------------------------------------------------------------------
 
@@ -23,12 +23,12 @@ function outest(OutestString) {
   };
 }
 
-const y = outest('hello ');
-const z = y('my ');
+const y = outest("hello ");
+const z = y("my ");
 // const z = outest('hello ')('my ')('friends ')
 // 1000 line of code
 
-z('friends ');
+z("friends ");
 
 //------------------------------------------ clouser setTimeout example
 function closr() {
@@ -62,9 +62,9 @@ a();
 
 //---------------------------------------------------------
 function outer() {
-  var x = 10;
+  let x = 10;
   function inner() {
-    var y = 5;
+    let y = 5;
     console.log(x + y);
     x = 20;
   }

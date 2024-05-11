@@ -1,8 +1,8 @@
 let name1 = {
-  firstName: 'Ashish',
-  lastName: 'singh',
+  firstName: "Ashish",
+  lastName: "singh",
   printFullName: function () {
-    console.log(this.firstName + ' ' + this.lastName);
+    console.log(this.firstName + " " + this.lastName);
   },
 };
 
@@ -16,16 +16,28 @@ name1.printFullName();
  */
 
 let name2 = {
-  firstName: 'Rajeev',
-  lastName: 'Kundial',
+  firstName: "Rajeev",
+  lastName: "Kundial",
 };
 
-function printName(city, state) {
-  console.log(this.firstName + ' ' + this.lastName + ' ' + city + ' ' + state);
+function printName(city, state, extraValue, atttitude) {
+  console.log(
+    this.firstName +
+      " " +
+      this.lastName +
+      " " +
+      city +
+      " " +
+      state +
+      " " +
+      extraValue +
+      " " +
+      atttitude
+  );
 }
 
-printName.call(name1, 'Noida', 'UP');
-printName.call(name2, 'Delhi', 'Delhi');
+printName.call(name1, "Noida", "UP");
+printName.call(name2, "Delhi", "india");
 
 /*****
  * Apply Example
@@ -35,8 +47,8 @@ printName.call(name2, 'Delhi', 'Delhi');
  * 3. The second argument (argsArray) is an array or array-like object containing the arguments to be passed to the function.
  */
 
-let arr1 = ['Noida', 'UP', 'beginner', 'introvert'];
-let arr2 = ['Delhi', 'intermidate', 'cool'];
+let arr1 = ["Noida", "UP", "beginner", "introvert"];
+let arr2 = ["Delhi", "Delhi", "intermidate", "cool"];
 
 printName.apply(name1, arr1);
 printName.apply(name2, arr2);
@@ -49,6 +61,6 @@ printName.apply(name2, arr2);
  * 2.
  */
 
-let bindFuntion = printName.bind(name1, 'Noida', 'UP');
+let bindFuntion = printName.bind(name1, "Noida", "UP");
 
 bindFuntion();

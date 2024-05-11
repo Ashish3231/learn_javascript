@@ -3,10 +3,10 @@
  */
 
 const users = [
-  { firstName: 'Rajeev', lastName: 'Kundiyal', age: '25' },
-  { firstName: 'Raja', lastName: 'Agarwal', age: '23' },
-  { firstName: 'Puspender', lastName: 'Kumar', age: '22' },
-  { firstName: 'Ashish', lastName: 'Singh', age: '22' },
+  { firstName: "Rajeev", lastName: "Kundiyal", age: "25" },
+  { firstName: "Raja", lastName: "Agarwal", age: "23" },
+  { firstName: "Puspender", lastName: "Kumar", age: "22" },
+  { firstName: "Ashish", lastName: "Singh", age: "22" },
 ];
 
 /****
@@ -15,9 +15,9 @@ const users = [
  * 1. Map: The map() method creates a new array by calling a provided function on every element in the calling array.
  */
 
-const userMap = users.map((user) => user.firstName + ' ' + user.lastName);
+const userMap = users.map((user) => user.firstName + " " + user.lastName);
 
-console.log('userMap: ', userMap);
+console.log("userMap: ", userMap);
 
 /*******
  * Filter Example
@@ -27,13 +27,13 @@ console.log('userMap: ', userMap);
 
 const resultFilter = users.filter((user) => user.age > 22);
 
-console.log('resultFilter: ', resultFilter);
+console.log("resultFilter: ", resultFilter);
 
 const combineResultFilterAndMap = users
   .filter((user) => user.age > 22)
   .map((user) => user.firstName);
 
-console.log('combineResultFilterAndMap: ', combineResultFilterAndMap);
+console.log("combineResultFilterAndMap: ", combineResultFilterAndMap);
 
 /**
  *
@@ -49,6 +49,8 @@ console.log('combineResultFilterAndMap: ', combineResultFilterAndMap);
 const resultReduce = users.reduce((acc, currentValue) => {
   // if (acc[currentValue.age]) {
   //   acc[currentValue.age] = ++acc[currentValue.age];
+  //   console.log("currentValue.age: ", currentValue.age); // key
+  //   console.log("acc[currentValue.age]: ", acc[currentValue.age]); //value
   // } else {
   //   acc[currentValue.age] = 1;
   // }
@@ -58,7 +60,7 @@ const resultReduce = users.reduce((acc, currentValue) => {
   return acc;
 }, {});
 
-console.log('resultReduce: ', resultReduce);
+console.log("resultReduce: ", resultReduce);
 
 const resultReduce1 = users.reduce((acc, currentVal) => {
   if (currentVal.age > 22) {
@@ -67,4 +69,4 @@ const resultReduce1 = users.reduce((acc, currentVal) => {
   return acc;
 }, []);
 
-console.log('resultReduce1: ', resultReduce1);
+console.log("resultReduce1: ", resultReduce1);
